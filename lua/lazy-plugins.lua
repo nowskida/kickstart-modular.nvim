@@ -20,7 +20,6 @@ require('lazy').setup({
   -- Use `opts = {}` to force a plugin to be loaded.
   --
 
-
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
@@ -36,13 +35,29 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
 
   require 'kickstart/plugins/treesitter',
+
+  require 'custom/plugins/gruvbox',
+
+  require 'custom/plugins/markdown',
+
+  require 'custom/plugins/render-markdown',
+
+  require 'custom/plugins/markdown-preview',
+
+  require 'custom/plugins/obsidian',
+
+  require 'custom/plugins/notify',
+
+  require 'custom/plugins/noice',
+
+  require 'custom/plugins/harpoon',
+
+  require 'custom/plugins/neogit',
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
