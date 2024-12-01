@@ -42,6 +42,7 @@ require('lazy').setup({
   require 'kickstart/plugins/treesitter',
 
   --require 'custom/plugins/gruvbox',
+  --require 'custom.plugins.rose-pine',
   require 'custom.plugins.gruvbox-material',
 
   require 'custom.plugins.barbecue',
