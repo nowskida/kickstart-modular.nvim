@@ -23,6 +23,8 @@ vim.opt.laststatus = 0
 vim.g.loaded_netrw = 1 -- disable netrw
 vim.g.loaded_netrwPlugin = 1 --  disable netrw
 
+-- Fix nvim colors over ssh + tmux sessions
+vim.opt.termguicolors = true
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
