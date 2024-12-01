@@ -7,7 +7,9 @@ return {
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {
-      only_render_image_at_cursor = true,
+      sign = {
+        enabled = false,
+      },
     },
   },
 }

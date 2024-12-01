@@ -45,4 +45,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- cd to current buffer (replace autochdir)
+vim.keymap.set('n', '<leader>bl', function()
+  vim.cmd [[cd %:h]]
+  vim.notify(vim.fn.getcwd(), vim.log.levels.INFO, {
+    title = 'Buffer Locate',
+  })
+end, { desc = 'Buffer Locate', silent = true })
 -- vim: ts=2 sts=2 sw=2 et
