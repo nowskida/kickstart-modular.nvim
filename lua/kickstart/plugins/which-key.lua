@@ -67,6 +67,7 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>o', group = '[O]bsidian' },
         { '<leader>m', group = '[M]arkdown' },
+        { '<leader>b', group = '[B]uffers' },
       },
     },
   },
