@@ -1,5 +1,7 @@
 return {
   { -- Collection of various small independent plugins/modules
+    -- mini.align
+    -- mini.starter
     'echasnovski/mini.nvim',
     config = function()
       -- Better Around/Inside textobjects
@@ -16,6 +18,7 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+      require('mini.align').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,

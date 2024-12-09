@@ -179,8 +179,6 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -189,7 +187,41 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
+        bashls = {},
+        gopls = {
+          settings = {
+            gopls = {
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+            },
+          },
+        },
+        rust_analyzer = {},
+        pylsp = {
+          plugins = {
+            -- formatter options
+            black = { enabled = true },
+            autopep8 = { enabled = false },
+            yapf = { enabled = false },
+            -- linter options
+            pylint = { enabled = true, executable = 'pylint' },
+            pyflakes = { enabled = false },
+            pycodestyle = { enabled = false },
+            -- type checker
+            pylsp_mypy = { enabled = true },
+            -- auto-completion options
+            jedi_completion = { fuzzy = true },
+            -- import sorting
+            pyls_isort = { enabled = true },
+          },
+        },
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
