@@ -7,7 +7,13 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     indent = { enabled = true },
-    input = { enabled = true },
+    input = {
+      enabled = true,
+      icon = ' ',
+      icon_hl = 'SnacksInputIcon',
+      win = { style = 'input' },
+      expand = true,
+    },
     notifier = {
       enabled = true,
       timeout = 3000,

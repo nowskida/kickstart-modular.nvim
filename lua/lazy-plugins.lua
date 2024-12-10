@@ -18,7 +18,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
 
   -- Custom
-  require 'plugins.gruvbox-material',
+  --require 'plugins.gruvbox-material',
   require 'plugins.barbecue',
   require 'plugins.colorizer',
   require 'plugins.markdown',
@@ -26,11 +26,11 @@ require('lazy').setup({
   require 'plugins.markdown-preview',
   require 'plugins.obsidian',
   require 'plugins.snacks',
-  --  require 'plugins.notify',
-  --require 'plugins.noice',
+  --require 'plugins.notify',
+  require 'plugins.noice',
 
   --require 'plugins.neogit',
-  --require 'plugins.tokyonight',
+  require 'plugins.tokyonight',
   --  require 'custom/plugins/harpoon',
 }, {
   ui = {
