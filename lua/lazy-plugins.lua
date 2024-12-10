@@ -25,9 +25,11 @@ require('lazy').setup({
   require 'plugins.render-markdown',
   require 'plugins.markdown-preview',
   require 'plugins.obsidian',
-  require 'plugins.notify',
-  require 'plugins.noice',
-  require 'plugins.neogit',
+  require 'plugins.snacks',
+  --  require 'plugins.notify',
+  --require 'plugins.noice',
+
+  --require 'plugins.neogit',
   --require 'plugins.tokyonight',
   --  require 'custom/plugins/harpoon',
 }, {
