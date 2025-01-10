@@ -12,10 +12,10 @@ return {
   --    'BufNewFile ~/vaults/work/*.md',
   --  },
   dependencies = {
-    -- Required.
     'nvim-lua/plenary.nvim',
-
-    -- see below for full list of optional dependencies 👇
+    'hrsh7th/nvim-cmp',
+    'nvim-telescope/telescope.nvim',
+    'nvim-treesitter/nvim-treesitter',
   },
   opts = {
     workspaces = {
@@ -50,6 +50,29 @@ return {
       path = client:vault_relative_path(path) or path
       return string.format('![%s](%s)', path.name, path)
     end,
+    mappings = {
+      -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
+      ['gf'] = {
+        action = function()
+          return require('obsidian').util.gf_passthrough()
+        end,
+        opts = { noremap = false, expr = true, buffer = true },
+      },
+      -- Toggle check-boxes.
+      ['<leader>ch'] = {
+        action = function()
+          return require('obsidian').util.toggle_checkbox()
+        end,
+        opts = { buffer = true },
+      },
+      -- Smart action depending on context, either follow link or toggle checkbox.
+      ['<cr>'] = {
+        action = function()
+          return require('obsidian').util.smart_action()
+        end,
+        opts = { buffer = true, expr = true },
+      },
+    },
   },
 
   vim.keymap.set('n', '<leader>oo', ':ObsidianOpen ', { desc = '[O]pen note' }),

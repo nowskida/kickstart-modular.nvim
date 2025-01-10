@@ -18,6 +18,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
 
   -- Custom
+  --require 'plugins.catppuccin',
   --require 'plugins.gruvbox-material',
   require 'plugins.barbecue',
   require 'plugins.colorizer',
