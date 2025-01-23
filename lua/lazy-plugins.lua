@@ -32,7 +32,6 @@ require('lazy').setup({
   --require 'plugins.notify',
   require 'plugins.noice',
 
-  --require 'plugins.neogit',
   --require 'plugins.tokyonight',
   --  require 'custom/plugins/harpoon',
 }, {
@@ -54,5 +53,4 @@ require('lazy').setup({
     },
   },
 })
-
 -- vim: ts=4 sts=2 sw=2 et
